@@ -13,7 +13,6 @@ Blog.init(
     {
         sequelize,
         modelName:'blog'
-
     }
 );
 
