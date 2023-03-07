@@ -8,7 +8,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 // express session and handlebars
 const exphbs = require('express-handlebars');
 
-const router = requier('./controllers');
+// const router = require('./controllers');
 const sequelize = require('./config/connection');
 // const helpers = require('./utils/helpers';)
 
@@ -28,8 +28,8 @@ const sess = {
 };
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(router);
-app.use(session(sess));
+// app.use(router);
+// app.use(session(sess));
 app.use(express.static(path.join(__dirname, 'public')));
 
 sequelize.sync({force:false}).then(() => {
