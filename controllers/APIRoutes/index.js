@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Comment, Blog } = require("../../models");
+const { User } = require("../../models");
 // sign up
 // router.post('api/login', async(req,res) =>{
 //     const newUserData = req.body
