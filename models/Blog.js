@@ -10,15 +10,15 @@ Blog.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-          },
-          title: {
+        },
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
-          },
-          text_content: {
+        },
+        text_content: {
             type: DataTypes.TEXT,
-          },
-          post_date: {
+        },
+        post_date: {
             type: DataTypes.DATE,
             allowNull:false
         },
@@ -28,7 +28,7 @@ Blog.init(
               model: 'users',
               key: 'id',
             },
-          },
+        },
     },
     {
         sequelize,
