@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+ const { User } = require("../../models");
 // sign up
 // router.post('api/login', async(req,res) =>{
 //     const newUserData = req.body
@@ -53,4 +53,4 @@ router.post("/logout", (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = router 

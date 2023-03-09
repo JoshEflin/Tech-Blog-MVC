@@ -1,0 +1,36 @@
+[
+    {
+        "title": "MongoDB for Children",
+        "text_content": "Have you ever thought about teaching your child the wondrous extravagance of Non-Relational Databases? Well now you can! MONGO DB FOR CHILDREN  walks your whippersnapper through the process of inserting items that dont relate to eachother at ALL into a database. Turkeys, Cars, Trucks and MORE! Teach your Child the way the truth and the light!",
+        "user_id": 2
+    },
+    {
+        
+        "title": "Data for Dump Trucks",
+        "text_content": "Got a bunch of stuff? Want to put it somewhere? Tired of the DUMP?!  put your junk data in our data dumptruck! Theres too much data in the world, you should just throw yours away. We'll use it to profit off of your ignorance for years to come! Dont sabotage yourself! let us do it for you! ",
+        "user_id": 1
+    },
+    {
+        
+        "title": "API's for pointy plants",
+        "text_content": "Need to make a new API? are you a Cactus? try us out",
+        "user_id": 3
+    },
+    {
+        
+        "title": "Why is my brain so smart?",
+        "text_content": "It just is",
+        "user_id": 1
+    },
+    {
+        "title": "use a different snake",
+        "text_content": "pythons and anaconda's are for losering. try our brand new language Gardner Snake!",
+        "user_id": 1
+    },
+    {
+        "title": "What if Humans could lay eggs? Would we even need chickens?",
+        "text_content": "Imagine this: your wife just laid an egg, should you eat it? Explore the possibilities of free food with our new hormone injections that make your wife useful.",
+        "user_id": 4
+    }
+
+]

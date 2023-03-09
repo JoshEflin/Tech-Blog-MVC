@@ -1,0 +1,27 @@
+[
+    {
+        "text_content":"Children do NOT deserve Mongo",
+        "blog_id":1,
+        "user_id": 3
+    },
+    {
+        "text_content":"A Data Dump is exactly what I need",
+        "blog_id":2,
+        "user_id": 1
+    },
+    {
+        "text_content":" I am a cactus and I can confirm",
+        "blog_id":3,
+        "user_id": 2
+    },
+    {
+        "text_content":"My Children need this",
+        "blog_id":1,
+        "user_id": 4
+    },
+    {
+        "text_content":" My wife could use this!",
+        "blog_id":5,
+        "user_id": 4
+    }
+]
