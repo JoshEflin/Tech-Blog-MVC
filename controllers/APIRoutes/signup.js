@@ -1,0 +1,23 @@
+const router = require("express").Router();
+const { User } = require("../../models");
+
+// log in
+router.post('api/signup', async(req,res) =>{
+
+  const incoming = req.body;
+  if (!incoming.email || !incoming.password || !incoming.username){
+    res.status(400).json({message: "your request to sign up was invalid"})
+  }
+  const userData = await User.create(incoming)
+  const plainUser= userData.get({plain:true})
+
+  req.session.save(() => {
+    req.session.user_id = userData.id;
+    req.session.logged_in = true;
+    req.session.username = userData.username;
+
+    res.json({ user: plainUser, message: "login Created" });
+  })
+})
+
+module.exports = router;
