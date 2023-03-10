@@ -21,10 +21,12 @@ async function handleSignUp(evt) {
     },
   })
   if (response.ok) {
+    console.log(response)
     console.log("working for now")
   } else {
     console.log("nah bruh");
   }
+  document.location.replace('/')
   signUpForm.reset();
 }
 signUpForm.addEventListener("submit", handleSignUp);

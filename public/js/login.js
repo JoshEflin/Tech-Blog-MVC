@@ -26,7 +26,7 @@ async function handleLogin(evt) {
     console.log("nah bruh");
   }
   loginForm.reset();
-
+  document.location.replace('/')
 }
 
 
