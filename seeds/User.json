@@ -1,0 +1,22 @@
+[
+    {
+        "username": "Penguin",
+        "email": "penguin@penguin.gov",
+        "password": "penguins"
+    },
+    {
+        "username": "snail",
+        "email": "slug@snailmail.com",
+        "password": "goop"
+    },
+    {
+        "username": "ChuckNorris69",
+        "email": "Charles.Norris@kickme.net",
+        "password": "penguins"
+    },
+    {
+        "username": "OldFart1956",
+        "email": "Elderly@aol.com",
+        "password": "wrinkles"
+    }
+]
