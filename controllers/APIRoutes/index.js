@@ -7,7 +7,7 @@ const logout = require("./logout")
 // log in
 router.use('/login',login)
 router.use('/signup',signup)
-router.use('/logout', logout)
+// router.use('/logout', logout)
 
 
 
