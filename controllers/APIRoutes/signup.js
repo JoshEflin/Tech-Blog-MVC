@@ -11,7 +11,7 @@ router.post('/', async(req,res) =>{
   }
   const userData = await User.create(incoming)
   const plainUser= userData.get({plain:true})
-
+console.log(userData)
   req.session.save(() => {
     req.session.user_id = incoming.id;
     req.session.logged_in = true;

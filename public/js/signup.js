@@ -13,7 +13,7 @@ async function handleSignUp(evt) {
     password: newPass,
   };
 
-  const response = await fetch("/api/login", {
+  const response = await fetch("/api/signup", {
     body: JSON.stringify(newUser),
     method: "POST",
     headers: {
@@ -26,7 +26,7 @@ async function handleSignUp(evt) {
   } else {
     console.log("nah bruh");
   }
-  document.location.replace('/')
+  // document.location.replace('/')
   signUpForm.reset();
 }
 signUpForm.addEventListener("submit", handleSignUp);
