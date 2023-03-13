@@ -2,22 +2,35 @@ const router = require("express").Router();
 const {User, Blog, Comment} = require('../../models');
 const withAuth = require('../../utils/auth');
 const blogposts = require('./blogposts');
+const users = require('./users')
 
-
+router.use('/users', users)
 router.use('/blogposts',blogposts);
+// router.get('/:id',withAuth, async(req,res)=>{
+//   const UID = req.session.user_id;
+//   const user = req.session.username;
+//   const userPosts= await User.findByPk(UID, {
+//     include:[
+//       {
+//         model:Blog,
+//         attributes: ['title','text_content','post_date'],
+//       },
+//     ],
+//   });
+//   console.log(req.session)
+//   plainPost= userPosts.get({plain:true})
+//   console.log(plainPost)
+//  res.render('dashboard',{
+//     user,
+//     plainPost
+//   })
+// })
 
 router.get('/dashboard',withAuth,  async(req, res) => {
-  // retrieve login info and store to variables
-  const session = req.session
-  const user = session.username;
-  const UID = session.user_id;
-  const logged_in = session.logged_in;
+  // redirect to /:id
+  const UID = req.session.user_id;
+  res.redirect(`/users/${UID}`);
   
-  res.render('home',{
-    user,
-    UID,
-    logged_in
-  })
 });
 
 router.get('/',  async(req, res) => {
@@ -53,7 +66,7 @@ router.get('/',  async(req, res) => {
   const UID = 'Guest';
   const logged_in = false;
   return res.render('home',{
-    posts,
+    plainPosts,
     user,
     UID,
     logged_in
@@ -65,6 +78,7 @@ router.get('/signup', async (req, res) =>{
   res.render('signup')
 });
 router.get('/login', async(req, res)=>{
+  console.log('called again')
     res.render('login')
 });
 
