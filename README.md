@@ -59,7 +59,7 @@ MIT
 ## Link
 
 ## Installation
-'npm i' in root directory then watch the magic!
+create a .env file in root directory with your mysql login credentials. Add a session secret to the .env. 'npm i' in root directory then watch the magic!
 
 ## Usage
 This repository is not designed for public use, It was built as practice with the MVC paradigm, using cookies, and a first attempt at using a view engine with express.js
