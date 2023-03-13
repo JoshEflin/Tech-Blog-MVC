@@ -1,0 +1,11 @@
+<section class = 'blog-post'>
+    <p> inside post stuff</p>
+    <a href = '/blogposts/{{id}}' ><h2 class = 'blog-title'>{{plainPost.title}}</h2></a>
+    <p class= 'date'> Created on:{{plainPost.post_date}} by: {{user.username}}</p>
+    <p class = 'blog-text'>{{plainPost.text_content}}</p>
+    <div class = 'comments'> Comments:
+    <p class = 'blog-comment'>{{plainPost.comments.[0].text_content}}</p>
+    </div>
+    <a href= '/comment'>add a Comment</a>
+
+</section>
