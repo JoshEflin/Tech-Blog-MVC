@@ -1,8 +1,12 @@
 <section class = 'my-dash'>
     <p>in dash</p>
-    {{username}}
-    {{email}}
-    {{blogs.[0].title}}
+    {{user}}
+    {{#each blogs}}
+    <p>{{title}}</p>
+    <p>{{post_date}}</p>
+    <p>{{text_content}}</p>
+    <p>{{/each}}</p>
+    <button id ='new-post'>make a new post!</button>
     
 
 </section>

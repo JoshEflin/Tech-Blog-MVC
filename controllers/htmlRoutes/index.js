@@ -6,25 +6,7 @@ const users = require('./users')
 
 router.use('/users', users)
 router.use('/blogposts',blogposts);
-// router.get('/:id',withAuth, async(req,res)=>{
-//   const UID = req.session.user_id;
-//   const user = req.session.username;
-//   const userPosts= await User.findByPk(UID, {
-//     include:[
-//       {
-//         model:Blog,
-//         attributes: ['title','text_content','post_date'],
-//       },
-//     ],
-//   });
-//   console.log(req.session)
-//   plainPost= userPosts.get({plain:true})
-//   console.log(plainPost)
-//  res.render('dashboard',{
-//     user,
-//     plainPost
-//   })
-// })
+
 
 router.get('/dashboard',withAuth,  async(req, res) => {
   // redirect to /:id

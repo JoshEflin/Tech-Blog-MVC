@@ -15,10 +15,10 @@ router.get('/:id',withAuth, async(req,res)=>{
     });
     console.log(req.session)
     plainPost= userPosts.get({plain:true})
-    console.log(plainPost)
+    const blogs = plainPost.blogs
    res.render('dashboard',{
       user,
-      plainPost
+      blogs
     })
   })
 module.exports = router
