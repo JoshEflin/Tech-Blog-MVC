@@ -2,11 +2,17 @@
     <p>in dash</p>
     {{user}}
     {{#each blogs}}
+    <p>{{id}}</p>
     <p>{{title}}</p>
     <p>{{post_date}}</p>
     <p>{{text_content}}</p>
-    <p>{{/each}}</p>
-    <button id ='new-post'>make a new post!</button>
+    <p></p>
+    
+    <button id='delete-post' data= {{id}} >Delete this post</button>
+    {{/each}}
+
+    <button  id ='new-post'>make a new post!</button>
+    <script src = '../js/delete.js'></script>
     
 
 </section>

@@ -9,13 +9,15 @@ router.get('/:id',withAuth, async(req,res)=>{
       include:[
         {
           model:Blog,
-          attributes: ['title','text_content','post_date'],
+          attributes: ['id','title','text_content','post_date'],
         },
       ],
     });
     console.log(req.session)
     plainPost= userPosts.get({plain:true})
+    console.log('\n----------------)')
     const blogs = plainPost.blogs
+    console.log(blogs)
    res.render('dashboard',{
       user,
       blogs
