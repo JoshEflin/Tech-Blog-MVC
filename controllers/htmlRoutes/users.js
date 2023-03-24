@@ -18,9 +18,18 @@ router.get('/:id',withAuth, async(req,res)=>{
     console.log('\n----------------)')
     const blogs = plainPost.blogs
     console.log(blogs)
+    if(req.session.logged_in){
+      const session = req.session
+      const user = session.username;
+      const UID = session.user_id;
+      const logged_in = session.logged_in;
+    
    res.render('dashboard',{
       user,
-      blogs
+      blogs,
+      logged_in
     })
+  }
   })
+
 module.exports = router
