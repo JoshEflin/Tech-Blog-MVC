@@ -1,11 +1,16 @@
-<section class = 'blog-post'>
-    <p> inside post stuff</p>
-    <a href = '/blogposts/{{id}}' ><h2 class = 'blog-title'>{{plainPost.title}}</h2></a>
+<section class = 'blog-post card'>
+    <a href = '/blogposts/{{id}}' >
+        <h2 class = 'blog-title card-title'>{{plainPost.title}}</h2>
+    </a>
+    <p class = 'blog-text card-text'>{{plainPost.text_content}}</p>
     <p class= 'date'> Created on:{{plainPost.post_date}} by: {{user.username}}</p>
-    <p class = 'blog-text'>{{plainPost.text_content}}</p>
     <div class = 'comments'> Comments:
     <p class = 'blog-comment'>{{plainPost.comments.[0].text_content}}</p>
     </div>
-    <a href= '/comment'>add a Comment</a>
-
+    <div class = "submit-comment">
+        <form>
+            <textarea name="comments" id="blog-comment" cols="30" rows="5">Enter New Comment</textarea>
+        </form>
+        <a href= '/comment' class = "btn btn-secondary comment-btn" >Add Comment</a>
+    </div>
 </section>

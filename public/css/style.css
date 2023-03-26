@@ -1,0 +1,36 @@
+.title {
+    text-align: center;
+}
+.blog-title {
+    text-align: center;
+}
+
+.blog-post {
+    background-color: beige;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+ a:has(.blog-title)  {
+    text-decoration: none;
+    color:brown;
+}
+.comment-btn {  
+    max-width: 25%;
+}
+.submit-comment {
+border-radius: 5px;
+padding-bottom: 15px;
+text-align: center;
+}
+.blog-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.date {
+    text-align: center;
+    font-size: small;
+}
+.comments {
+    text-align: center;
+}
