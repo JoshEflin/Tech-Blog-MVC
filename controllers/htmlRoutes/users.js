@@ -16,6 +16,7 @@ router.get('/:id',withAuth, async(req,res)=>{
     console.log(req.session)
     plainPost= userPosts.get({plain:true})
     console.log('\n----------------)')
+    // try to reuse plain posts here to use partial
     const blogs = plainPost.blogs
     console.log(blogs)
     if(req.session.logged_in){
