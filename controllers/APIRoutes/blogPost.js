@@ -7,8 +7,8 @@ const withAuth = require('../../utils/auth')
 router.post('/', withAuth, async(req, res)=>{
     console.log(req.body)
     const newPost = await Blog.create(req.body)
-    // console.log('OOPS')
-    res.send('ok')
+
+    res.json({mesage:'ok'})
 
 })
 
@@ -30,24 +30,6 @@ router.put('/edit/:id', withAuth, async(req, res)=>{
     res.json({meesage:'post revised'})
 
 })
-// get or post
-// router.get('/edit/:id', withAuth, async (req, res) => {
-//   try {
-//     const postData = await Post.findByPk(req.params.id);
 
-//     if (postData) {
-//       const post = postData.get({ plain: true });
-
-//       res.render('edit-post', {
-//         layout: 'dashboard',
-//         post,
-//       });
-//     } else {
-//       res.status(404).end();
-//     }
-//   } catch (err) {
-//     res.redirect('login');
-//   }
-// });
 
 module.exports=router
