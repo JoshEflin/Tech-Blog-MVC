@@ -6,7 +6,7 @@
     <p class= 'date'> Created on:{{plainPost.post_date}} by: {{user.username}}</p>
     <div class = 'comments'> Comments:
     {{#each plainPost.comments }}
-    <p class = 'blog-comment'>{{text_content}} posted by {{user.username}}</p>
+    <p class = 'blog-comment'>{{text_content}} posted by {{user.username}} at {{date_created}}</p>
     {{/each}}
     </div>
     <div class = "submit-comment">
