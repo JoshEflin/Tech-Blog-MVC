@@ -19,10 +19,14 @@ router.get('/',  async(req, res) => {
   const blogRend = await Blog.findAll({
     attributes: ['id', 'title', 'post_date', 'text_content'],
     order: [['post_date', 'DESC']],
-    include: {
+    include: [{
       model: User,
       attributes: ['username'],
-  }  
+    },
+    { model: Comment,
+    include:{model: User,
+    attributes:['username']} }
+  ]
   });
   if(!blogRend){
     return res.status(404).json({message:'Josh did not seed the database'})
@@ -31,6 +35,11 @@ router.get('/',  async(req, res) => {
     return post.get({plain:true});
     });
     console.log(plainPosts)
+    const comments = plainPosts.map((post)=>{
+      return post.comments
+    })
+    console.log(comments)
+    
   // retrieve login info and store to variables
   if(req.session.logged_in){
   const session = req.session

@@ -5,12 +5,14 @@
     <p class = 'blog-text card-text'>{{plainPost.text_content}}</p>
     <p class= 'date'> Created on:{{plainPost.post_date}} by: {{user.username}}</p>
     <div class = 'comments'> Comments:
-    <p class = 'blog-comment'>{{plainPost.comments.[0].text_content}}</p>
+    {{#each plainPost.comments }}
+    <p class = 'blog-comment'>{{text_content}} posted by {{user.username}}</p>
+    {{/each}}
     </div>
     <div class = "submit-comment">
-        <form>
-            <textarea name="comments" id="blog-comment" cols="30" rows="5">Enter New Comment</textarea>
+        <form  class = "comment-form" data-postId= {{id}}>
+            <textarea name="comments" id="blog-comment-{{id}}" cols="30" rows="5" placeholder =" Enter New Comment" ></textarea>
         </form>
-        <a href= '/comment' class = "btn btn-secondary comment-btn" >Add Comment</a>
+        <button id ="comment-btn-{{id}}" class = "btn btn-secondary " >Add Comment</button>
     </div>
 </section>

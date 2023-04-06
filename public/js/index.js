@@ -6,7 +6,7 @@ const homeBtn = document.querySelector('#home-nav')
 
 
 
-console.log('connected')
+console.log('connected index')
 
 homeBtn.addEventListener('click',() =>{
     document.location.replace('/');
