@@ -1,26 +1,47 @@
-<section class = 'container-md my-dash'>
-    {{!-- reuse post stuff here as well --}}
-    <p>in dash</p>
-    {{user}}
-    {{#each blogs}}
-    <p>{{id}}</p>
-    <p>{{title}}</p>
-    <p>{{post_date}}</p>
-    <p>{{text_content}}</p>
-    <p></p>
-    
-{{!-- need to change  these ID's to Classes --}}
-    <button id='delete-post' data= {{id}} >Delete this post</button>
-    {{/each}}
-{{!-- need to change  these ID's to Classes --}}
-    <form action="submit" class="new-post-form" data-UID="{{UID}}" >
-        <textarea name="title" id="blog-title" cols="30" rows="1"placeholder="New Post Title"></textarea>
-        <textarea name="text-content" id="blog-text" cols="30" rows="10"placeholder="New Post"></textarea>
-    </form>
-    <button  id ='new-post-btn'>make a new post!</button>
-    <script src = '../js/delete.js'></script>
-    <script src = '../js/new-post.js'></script>
+<section class="container-md my-dash">
+  {{! reuse post stuff here as well }}
   
-    
+  <h2> ALL POSTS BY {{user}}</h2>
+  {{#each blogs}}
+    <div id = "post-{{id}}"class="card">
+      <div class="card blog-post">
+        <a href="/blogposts/{{id}}">
+          <h2 class="blog-title card-title">{{title}}</h2>
+        </a>
+        <p class="date">{{post_date}}</p>
+        <p class="blog-text">{{text_content}}</p>
+
+        {{! need to change  these ID's to Classes }}
+        <div class="buttons-dash">
+          <button class="edit-post btn btn-secondary" data="{{id}}">Edit
+            this post</button>
+          <button class="delete-post btn btn-secondary" data={{id}}>Delete
+            this post</button>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+  {{! need to change  these ID's to Classes }}
+  <div class="text-boxes">
+  <form action="submit" class="new-post-form" data-UID="{{UID}}">
+    <textarea
+      name="title"
+      id="blog-title"
+      cols="30"
+      rows="1"
+      placeholder="New Post Title"
+    ></textarea>
+    <textarea
+      name="text-content"
+      id="blog-text"
+      cols="30"
+      rows="10"
+      placeholder="New Post"
+    ></textarea>
+  </form>
+  </div>
+  <button id="new-post-btn" class="btn btn-secondary">Create a new post!</button>
+  <script src="../js/delete.js"></script>
+  <script src="../js/new-post.js"></script>
 
 </section>

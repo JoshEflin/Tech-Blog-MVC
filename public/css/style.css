@@ -4,7 +4,10 @@
 .blog-title {
     text-align: center;
 }
-
+.buttons-dash{
+    display: flex;
+    justify-content: space-around;
+}
 .blog-post {
     background-color: beige;
     text-decoration: none;
@@ -41,4 +44,14 @@ text-align: center;
     list-style-type: none;
     font-size: 1rem;
 
+}
+.my-dash{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.text-boxes .new-post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
