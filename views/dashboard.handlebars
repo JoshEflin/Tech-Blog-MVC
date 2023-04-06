@@ -13,7 +13,11 @@
     <button id='delete-post' data= {{id}} >Delete this post</button>
     {{/each}}
 {{!-- need to change  these ID's to Classes --}}
-    <button  id ='new-post'>make a new post!</button>
+    <form action="submit" class="new-post-form" data-UID="{{UID}}" >
+        <textarea name="title" id="blog-title" cols="30" rows="1"placeholder="New Post Title"></textarea>
+        <textarea name="text-content" id="blog-text" cols="30" rows="10"placeholder="New Post"></textarea>
+    </form>
+    <button  id ='new-post-btn'>make a new post!</button>
     <script src = '../js/delete.js'></script>
     <script src = '../js/new-post.js'></script>
   

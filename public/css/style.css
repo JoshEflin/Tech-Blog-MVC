@@ -33,4 +33,12 @@ text-align: center;
 }
 .comments {
     text-align: center;
+    font-size: larger;
+    outline: 1px dotted brown;
+    margin-right: 10px;
+}
+.list-group{
+    list-style-type: none;
+    font-size: 1rem;
+
 }

@@ -1,6 +1,16 @@
 // grab post by primary Key then change that bitch. then render
+const router = require("express").Router();
+const {User, Blog, Comment} = require('../../models')
+const withAuth = require('../../utils/auth')
 
 
+router.post('/', withAuth, async(req, res)=>{
+    console.log(req.body)
+    const newPost = await Blog.create(req.body)
+    console.log(newPost)
+    res.send('ok')
+
+})
 // get or post
 // router.get('/edit/:id', withAuth, async (req, res) => {
 //   try {
@@ -21,4 +31,4 @@
 //   }
 // });
 
-
+module.exports=router

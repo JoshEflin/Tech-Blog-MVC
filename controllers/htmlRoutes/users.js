@@ -28,7 +28,8 @@ router.get('/:id',withAuth, async(req,res)=>{
    res.render('dashboard',{
       user,
       blogs,
-      logged_in
+      logged_in,
+      UID
     })
   }
   })
