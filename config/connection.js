@@ -22,10 +22,10 @@ const sess = {
   resave: false,
   saveuninitialized: true,
   cookie: {
-    maxAge:1000 *60*5,
-    httpOnly: true,
-    secure: false,
-    sameSite: 'strict',
+    // maxAge:1000 *60*5,
+    // httpOnly: true,
+    // secure: false,
+    // sameSite: 'strict',
   },
   
   store: new SequelizeStore({
