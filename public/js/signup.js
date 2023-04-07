@@ -26,7 +26,7 @@ async function handleSignUp(evt) {
   } else {
     console.log("nah bruh");
   }
-  // document.location.replace('/')
   signUpForm.reset();
+  document.location.replace('/')
 }
 signUpForm.addEventListener("submit", handleSignUp);
