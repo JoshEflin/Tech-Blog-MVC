@@ -14,6 +14,7 @@ router.get('/:id',withAuth, async(req,res)=>{
       ],
     });
     console.log(req.session)
+    if (userPosts){
     plainPost= userPosts.get({plain:true})
     console.log('\n----------------)')
     // try to reuse plain posts here to use partial
@@ -31,7 +32,23 @@ router.get('/:id',withAuth, async(req,res)=>{
       logged_in,
       UID
     })
+  }}else{
+    if(req.session.logged_in){
+      const session = req.session
+      const user = session.username;
+      const UID = session.user_id;
+      const logged_in = session.logged_in;
+    
+   res.render('dashboard',{
+      user,
+      
+      logged_in,
+      UID
+    })
   }
-  })
+
+  }
+  }
+  )
 
 module.exports = router
