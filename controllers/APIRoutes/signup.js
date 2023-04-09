@@ -3,7 +3,7 @@ const { User } = require("../../models");
 
 // log in
 router.post('/', async(req,res) =>{
-
+try{
   const incoming = req.body;
   if (!incoming.email || !incoming.password || !incoming.username){
     res.status(400).json({message: "your request to sign up was invalid"})
@@ -23,6 +23,8 @@ console.log(userData)
 
     res.status(201).json({ user: plainUser, message: "login Created" });
   })
+}catch(e){
+  res.status(500).json(e, {message: "something went wrong"})
+}
 })
-
 module.exports = router;
