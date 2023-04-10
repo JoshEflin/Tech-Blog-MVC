@@ -19,7 +19,7 @@ console.log(userData)
   req.session.save(() => {
     req.session.user_id = userData.id;
     req.session.logged_in = true;
-    req.session.username = incoming.username;
+    req.session.username = userData.username;
 
     res.status(201).json({ user: plainUser, message: "login Created" });
   })
